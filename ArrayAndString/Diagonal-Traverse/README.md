@@ -1,7 +1,5 @@
 Given a matrix of M x N elements (M rows, N columns), return all elements of the matrix in diagonal order as shown in the below image.
 
-<img src="static/image.png" />
-
 Example:
 
 Input:
@@ -14,4 +12,4 @@ Input:
 Output:  [1,2,4,7,5,3,6,8,9]
 
 Explanation:
-
+<img src="static/image.png" />
