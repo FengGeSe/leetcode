@@ -9,3 +9,4 @@
   - [x] Find-Pivot-Index 
   - [x] Largest-Number-Twice-Others  
   - [x] Plus-One
+  - [x] Sprial-Matrix
