@@ -10,3 +10,4 @@
   - [x] Largest-Number-Twice-Others  
   - [x] Plus-One
   - [x] Sprial-Matrix
+  - [x] Pascal-Triangle
