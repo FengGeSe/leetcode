@@ -11,3 +11,4 @@
   - [x] Plus-One
   - [x] Sprial-Matrix
   - [x] Pascal-Triangle
+  - [x] Add-Binary
