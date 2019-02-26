@@ -12,3 +12,4 @@
   - [x] Sprial-Matrix
   - [x] Pascal-Triangle
   - [x] Add-Binary
+  - [x] Implement-StrStr
