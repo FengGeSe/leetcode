@@ -13,3 +13,4 @@
   - [x] Pascal-Triangle
   - [x] Add-Binary
   - [x] Implement-StrStr
+  - [x] Longest-Common-Prefix
