@@ -1,32 +1,30 @@
 
 # 题目
-Implement strStr().
+Write a function to find the longest common prefix string amongst an array of strings.
 
-Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+If there is no common prefix, return an empty string "".
 
 Example 1:
 
 Input: 
 ```
-haystack = "hello", needle = "ll"
+["flower", "flow", "flight"]
 ```
-
 Output: 
-> 2
+> "fl"
 
 
 Example 2:
 
 Input: 
 ```
-haystack = "aaaaa", needle = "bba"
+["dog", "racecar", "car"]
 ```
-
 Output: 
-> -1
+> ""
 
-Clarification:
 
-What should we return when needle is an empty string? This is a great question to ask during an interview.
+Explanation: There is no common prefix among the input strings.
+Note:
 
-For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
+All given inputs are in lowercase letters a-z.

@@ -6,10 +6,9 @@ import (
 )
 
 type Case struct {
-	Name     string
-	Haystack string
-	Needle   string
-	Output   int
+	Name   string
+	Strs   []string
+	Output string
 }
 
 // 单元测试
@@ -17,58 +16,30 @@ func TestAddBinary(t *testing.T) {
 
 	cases := []Case{
 		{
-			Name:     "Haystack is an empty string",
-			Haystack: "",
-			Needle:   "a",
-			Output:   -1,
+			Name:   `["flower", "flow", "flight"] => "fl"`,
+			Strs:   []string{"flower", "flow", "flight"},
+			Output: "fl",
 		},
 		{
-			Name:     "Needle is an empty string",
-			Haystack: "hello",
-			Needle:   "",
-			Output:   0,
+			Name:   `["dog", "racecar", "car"] => ""`,
+			Strs:   []string{"dog", "racecar", "car"},
+			Output: "",
 		},
 		{
-			Name:     "Haystack and Needld are empty string",
-			Haystack: "",
-			Needle:   "",
-			Output:   0,
+			Name:   `["aca", "cba"] => ""`,
+			Strs:   []string{"aca", "cba"},
+			Output: "",
 		},
 		{
-			Name:     "Find it",
-			Haystack: "hello",
-			Needle:   "ll",
-			Output:   2,
-		},
-		{
-			Name:     "Not Find it",
-			Haystack: "aaaaa",
-			Needle:   "bba",
-			Output:   -1,
-		},
-		{
-			Name:     "Same string",
-			Haystack: "a",
-			Needle:   "a",
-			Output:   0,
-		},
-		{
-			Name:     "manay string",
-			Haystack: "aaaa",
-			Needle:   "a",
-			Output:   0,
-		},
-		{
-			Name:     "Find it",
-			Haystack: "mississippi",
-			Needle:   "issip",
-			Output:   4,
+			Name:   `[] => ""`,
+			Strs:   []string{},
+			Output: "",
 		},
 	}
 
 	for _, c := range cases {
 		Convey(c.Name, t, func() {
-			result := StrStr(c.Haystack, c.Needle)
+			result := LongestCommonPrefix(c.Strs)
 			So(result, ShouldEqual, c.Output)
 		})
 	}
@@ -79,7 +50,7 @@ func TestAddBinary(t *testing.T) {
 func BenchmarkStrStr(b *testing.B) {
 
 	for i := 0; i < b.N; i++ {
-		StrStr("Hello", "ll")
+		LongestCommonPrefix([]string{"flower", "flow", "flight"})
 	}
 
 }

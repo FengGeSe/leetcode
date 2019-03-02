@@ -2,37 +2,34 @@ package main
 
 import ()
 
-func StrStr(haystack, needle string) int {
-
-	result := -1
-	if needle == "" {
-		return 0
+func LongestCommonPrefix(strs []string) string {
+	if len(strs) == 0 {
+		return ""
+	}
+	min := len(strs[0])
+	for _, s := range strs {
+		if len(s) < min {
+			min = len(s)
+		}
 	}
 
-	if len(needle) > len(haystack) {
-		return -1
-	}
-
-	start := 0
-	for i := 0; i < len(haystack); i++ {
-		start = i
-		if haystack[i] == needle[0] && len(haystack)-i >= len(needle) {
-			flag := true
-			t := start
-			for j, _ := range needle {
-				if haystack[t] != needle[j] {
-					flag = false
-					break
-				}
-				t++
-			}
-			if flag {
-				result = start
+	result := []byte{}
+	for i := 0; i < min; i++ {
+		c := strs[0][i]
+		flag := true
+		for _, s := range strs {
+			if s[i] != c {
+				flag = false
 				break
 			}
 		}
+		if flag {
+			result = append(result, c)
+		} else {
+			break
+		}
 
 	}
-	return result
+	return string(result)
 
 }

@@ -15,6 +15,7 @@ func TestFindPivotIndex(t *testing.T) {
 		{"Input:[] Output:-1", []int{}, -1},
 		{"Input:[0, 0] Output:0", []int{0, 0}, 0},
 		{"Input:[1, 7, 3, 6, 5, 6] Output:3", []int{1, 7, 3, 6, 5, 6}, 3},
+		{"Input:[1, 2, 2, 1] Output:-1", []int{1, 2, 2, 1}, -1},
 	}
 
 	for _, c := range cases {
