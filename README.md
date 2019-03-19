@@ -17,7 +17,8 @@
   - [x] Reverse-String
   - [x] Array-Parttition
 
-
+- [x] Sort                           排序算法
+  - [x] Bubble-Sort     
 
 ### 算法目录
 
