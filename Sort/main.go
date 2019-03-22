@@ -2,6 +2,7 @@ package main
 
 import ()
 
+// 冒泡排序
 func BubbleSort(nums []int) {
 	for i := 0; i < len(nums); i++ {
 		for j := 0; j < len(nums)-i-1; j++ {
@@ -12,6 +13,7 @@ func BubbleSort(nums []int) {
 	}
 }
 
+// 冒泡排序-改
 func BubbleSort2(nums []int) {
 	var flag = false
 	for !flag {
@@ -23,4 +25,9 @@ func BubbleSort2(nums []int) {
 			}
 		}
 	}
+}
+
+// 快速排序
+func QuickSort(nums []int) {
+
 }
