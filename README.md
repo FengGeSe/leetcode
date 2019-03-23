@@ -5,7 +5,7 @@
 
 ### 项目目录
 - [x] ArrayAndString       数组和字符串相关算法
-  - [x] Diagonal-Traverse 
+  - [x] [Diagonal-Traverse](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Add-Binary/README.md)
   - [x] Find-Pivot-Index 
   - [x] Largest-Number-Twice-Others  
   - [x] Plus-One
