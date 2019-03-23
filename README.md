@@ -5,19 +5,19 @@
 
 ### 项目目录
 - [x] ArrayAndString       数组和字符串相关算法
-  - [x] [Diagonal-Traverse](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Add-Binary/README.md)
-  - [x] [Find-Pivot-Index](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Find-Pivot-Index/README.md)
-  - [x] [Largest-Number-Twice-Others](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Largest-Number-Twice-Others/README.md)
-  - [x] [Plus-One](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Plus-One/README.md)
-  - [x] [Sprial-Matrix](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Sprial-Matrix/README.md)
-  - [x] [Pascal-Triangle](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Pascal-Triangle/README.md)
-  - [x] [Add-Binary](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Add-Binary/README.md)
-  - [x] [Implement-StrStr](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Implement-StrStr/README.md)
-  - [x] [Longest-Common-Prefix](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Longest-Common-Prefix/README.md)
-  - [x] [Reverse-String](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Reverse-String/README.md)
-  - [x] [Array-Parttition](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Array-Parttition/README.md)
+  - [x] [Diagonal-Traverse](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Add-Binary)
+  - [x] [Find-Pivot-Index](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Find-Pivot-Index)
+  - [x] [Largest-Number-Twice-Others](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Largest-Number-Twice-Others)
+  - [x] [Plus-One](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Plus-One)
+  - [x] [Sprial-Matrix](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Sprial-Matrix)
+  - [x] [Pascal-Triangle](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Pascal-Triangle)
+  - [x] [Add-Binary](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Add-Binary)
+  - [x] [Implement-StrStr](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Implement-StrStr)
+  - [x] [Longest-Common-Prefix](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Longest-Common-Prefix)
+  - [x] [Reverse-String](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Reverse-String)
+  - [x] [Array-Parttition](https://github.com/FengGeSe/leetcode/blob/master/ArrayAndString/Array-Parttition)
 
-- [x] [Sort](https://github.com/FengGeSe/leetcode/blob/master/Sort/README.md)
+- [x] [Sort](https://github.com/FengGeSe/leetcode/blob/master/Sort)
 
 ### 算法目录
 
