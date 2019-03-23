@@ -27,6 +27,20 @@ func BubbleSort2(nums []int) {
 	}
 }
 
+// 选择排序
+func SelectionSort(nums []int) {
+	for i := 0; i < len(nums)-1; i++ {
+		p := i
+		for j := i + 2; j < len(nums)-1; j++ {
+			if nums[j] < nums[p] {
+				p = j
+			}
+		}
+		nums[i], nums[p] = nums[p], nums[i]
+	}
+
+}
+
 // 快速排序
 func QuickSort(nums []int) {
 

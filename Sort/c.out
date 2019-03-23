@@ -1,5 +1,10 @@
 mode: set
-leetcode/Sort/Bubble-Sort/main.go:5.29,6.33 1 1
-leetcode/Sort/Bubble-Sort/main.go:6.33,7.38 1 1
-leetcode/Sort/Bubble-Sort/main.go:7.38,8.27 1 1
-leetcode/Sort/Bubble-Sort/main.go:8.27,10.5 1 1
+leetcode/Sort/main.go:6.29,7.33 1 1
+leetcode/Sort/main.go:7.33,8.38 1 1
+leetcode/Sort/main.go:8.38,9.27 1 1
+leetcode/Sort/main.go:9.27,11.5 1 1
+leetcode/Sort/main.go:17.30,19.12 2 1
+leetcode/Sort/main.go:19.12,21.36 2 1
+leetcode/Sort/main.go:21.36,22.27 1 1
+leetcode/Sort/main.go:22.27,25.5 2 0
+leetcode/Sort/main.go:31.29,33.2 0 0
