@@ -20,9 +20,19 @@ var cases = []Case{
 		Excepted: []int{},
 	},
 	{
+		Name:     `[1]`,
+		Input:    []int{1},
+		Excepted: []int{1},
+	},
+	{
 		Name:     `[1, 4, 3, 2]`,
 		Input:    []int{1, 4, 3, 2},
 		Excepted: []int{1, 2, 3, 4},
+	},
+	{
+		Name:     `[1, 4, 3, 2, 0]`,
+		Input:    []int{1, 4, 3, 2, 0},
+		Excepted: []int{0, 1, 2, 3, 4},
 	},
 	{
 		Name:     `[1, 4, 3, 2, 4, 3, 6, 8, 4, 2, 0, 1, 3, 5, 7, 3, 8, 17, 28, 90]`,
@@ -32,13 +42,16 @@ var cases = []Case{
 }
 
 // 基准测试case
-// 冒泡排序最差情况
-// var nums = []int{20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+// 排序最差情况
+var nums = []int{20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
 
-// 冒泡排序最好情况
-var nums = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+// 排序最好情况
+// var nums = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 
-// 冒泡排序
+// #########################################################################
+// ####                            BubbleSort                           ####
+// ####                             冒泡排序                            ####
+// #########################################################################
 func TestBubbleSort(t *testing.T) {
 	for _, c := range cases {
 		Convey("BubbleSort", t, func() {
@@ -74,7 +87,10 @@ func BenchmarkBubbleSort(b *testing.B) {
 	}
 }
 
-// 选择排序
+// #########################################################################
+// ####                            SelectionSort                        ####
+// ####                               选择排序                          ####
+// #########################################################################
 func TestSelectionSort(t *testing.T) {
 	for _, c := range cases {
 		Convey("SelectionSort", t, func() {
@@ -94,7 +110,34 @@ func BenchmarkSelectionSort(b *testing.B) {
 	}
 }
 
-// 快速排序
+// #########################################################################
+// ####                              InsertionSort                      ####
+// ####                                 插入排序                        ####
+// #########################################################################
+func TestInsertionSort(t *testing.T) {
+	for _, c := range cases {
+		Convey("InsertionSort", t, func() {
+			Convey(c.Name, func() {
+				InsertionSort(c.Input)
+				So(c.Input, ShouldResemble, c.Excepted)
+			})
+
+		})
+	}
+}
+
+func BenchmarkInsertionSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		numbers := make([]int, len(nums))
+		copy(numbers, nums)
+		InsertionSort(numbers)
+	}
+}
+
+// #########################################################################
+// ####                              QuickSort                          ####
+// ####                               快速排序                          ####
+// #########################################################################
 func TestQuickSort(t *testing.T) {
 	for _, c := range cases {
 		Convey("QuickSort", t, func() {

@@ -1,6 +1,8 @@
 package main
 
-import ()
+import (
+// "fmt"
+)
 
 // 冒泡排序
 func BubbleSort(nums []int) {
@@ -39,6 +41,25 @@ func SelectionSort(nums []int) {
 		nums[i], nums[p] = nums[p], nums[i]
 	}
 
+}
+
+// 插入排序
+func InsertionSort(nums []int) {
+	for i := 0; i < len(nums)-1; i++ {
+		temp := nums[i+1]
+		for j := i; j >= 0; j-- {
+			if temp >= nums[j] {
+				nums[j+1] = temp
+				break
+			}
+			if temp < nums[j] {
+				nums[j+1] = nums[j]
+				if j == 0 {
+					nums[0] = temp
+				}
+			}
+		}
+	}
 }
 
 // 快速排序
