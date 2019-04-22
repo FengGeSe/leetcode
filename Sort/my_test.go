@@ -35,6 +35,11 @@ var cases = []Case{
 		Excepted: []int{0, 1, 2, 3, 4},
 	},
 	{
+		Name:     `[3, 4, 1, 2, 0]`,
+		Input:    []int{3, 4, 1, 2, 0},
+		Excepted: []int{0, 1, 2, 3, 4},
+	},
+	{
 		Name:     `[1, 4, 3, 2, 4, 3, 6, 8, 4, 2, 0, 1, 3, 5, 7, 3, 8, 17, 28, 90]`,
 		Input:    []int{1, 4, 3, 2, 4, 3, 6, 8, 4, 2, 0, 1, 3, 5, 7, 3, 8, 17, 28, 90},
 		Excepted: []int{0, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 6, 7, 8, 8, 17, 28, 90},
@@ -131,6 +136,54 @@ func BenchmarkInsertionSort(b *testing.B) {
 		numbers := make([]int, len(nums))
 		copy(numbers, nums)
 		InsertionSort(numbers)
+	}
+}
+
+// #########################################################################
+// ####                              ShellSort                          ####
+// ####                               希尔排序                          ####
+// #########################################################################
+func TestShellSort(t *testing.T) {
+	for _, c := range cases {
+		Convey("ShellSort", t, func() {
+			Convey(c.Name, func() {
+				ShellSort(c.Input)
+				So(c.Input, ShouldResemble, c.Excepted)
+			})
+
+		})
+	}
+}
+
+func BenchmarkShellSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		numbers := make([]int, len(nums))
+		copy(numbers, nums)
+		ShellSort(numbers)
+	}
+}
+
+// #########################################################################
+// ####                              MergeSort                          ####
+// ####                               归并排序                          ####
+// #########################################################################
+func TestMergeSort(t *testing.T) {
+	for _, c := range cases {
+		Convey("MergeSort", t, func() {
+			Convey(c.Name, func() {
+				MergeSort(c.Input)
+				So(c.Input, ShouldResemble, c.Excepted)
+			})
+
+		})
+	}
+}
+
+func BenchmarkMergeSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		numbers := make([]int, len(nums))
+		copy(numbers, nums)
+		MergeSort(numbers)
 	}
 }
 
