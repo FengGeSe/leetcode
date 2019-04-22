@@ -103,23 +103,21 @@ func merge(left, right []int) []int {
 }
 
 // 快速排序
-
 func QuickSort(nums []int) {
 	if len(nums) <= 1 {
 		return
 	}
-
 	var (
-		key  = nums[0] //以第一个数为key
+		key  = nums[0]
 		low  = 0
 		high = len(nums) - 1
 	)
 	for low < high {
-		for low < high && nums[high] > key { //开始从后往前找小与key的
+		for low < high && nums[high] > key {
 			high--
 		}
-		nums[low] = nums[high]               //找到key,交换，交换
-		for low < high && nums[low] <= key { //找到key,交换一次之后，换方向从前往后遍历
+		nums[low] = nums[high]
+		for low < high && nums[low] <= key {
 			low++
 		}
 		nums[high] = nums[low]
