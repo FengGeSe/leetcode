@@ -6,6 +6,8 @@ func LongestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
 		return ""
 	}
+
+	// 字符串最小长度
 	min := len(strs[0])
 	for _, s := range strs {
 		if len(s) < min {
