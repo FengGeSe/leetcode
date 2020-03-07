@@ -76,13 +76,6 @@ func TestBubbleSort(t *testing.T) {
 		})
 	}
 }
-func BenchmarkBubbleSort2(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		numbers := make([]int, len(nums))
-		copy(numbers, nums)
-		BubbleSort2(numbers)
-	}
-}
 
 func BenchmarkBubbleSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {

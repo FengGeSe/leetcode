@@ -4,7 +4,7 @@ import ()
 
 func FindDiagonalOrder(matrix [][]int) []int {
 
-	flag := true
+	flag := true // 对角线方向  true:右上  false:左下
 	x, y := 0, 0
 	result := []int{}
 	if len(matrix) == 0 || len(matrix[0]) == 0 {
@@ -20,6 +20,7 @@ func FindDiagonalOrder(matrix [][]int) []int {
 				flag = !flag
 			}
 
+			// 右上遍历的时候，当前点的位置会影响怎么移动到下一个点
 			if y == n-1 {
 				x++
 			} else if x == 0 {
